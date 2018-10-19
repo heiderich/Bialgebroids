@@ -18,7 +18,7 @@ jobs:
           cd QPA2
           pwd
           export TERM=xterm
-          git show HEAD | cat
+          git log --oneline | head -1
           cd ../Bialgebroids
           echo "SetUserPreference(\"PackagesToLoad\", []);" > ~/.gap/gap.ini
           sed 's/  SuggestedOtherPackages := \[ \[ "Browse", ">=0" \] \],/  SuggestedOtherPackages := [ ],/g' -i ~/.gap/pkg/CAP_project/CAP/PackageInfo.g
