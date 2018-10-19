@@ -17,7 +17,7 @@ jobs:
           git clone --depth 1 https://github.com/oysteins/QPA2.git
           cd QPA2
           pwd
-          TERM=xterm
+          export TERM=xterm
           git show HEAD
           cd ../Bialgebroids
           echo "SetUserPreference(\"PackagesToLoad\", []);" > ~/.gap/gap.ini
