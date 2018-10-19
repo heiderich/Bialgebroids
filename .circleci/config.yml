@@ -15,7 +15,9 @@ jobs:
           git clone --depth 1 https://github.com/homalg-project/CAP_project.git
           git clone --depth 1 https://github.com/homalg-project/FunctorCategories
           git clone --depth 1 https://github.com/oysteins/QPA2.git
-          cd Bialgebroids
+          cd QPA2
+          git show HEAD
+          cd ../Bialgebroids
           echo "SetUserPreference(\"PackagesToLoad\", []);" > ~/.gap/gap.ini
           sed 's/  SuggestedOtherPackages := \[ \[ "Browse", ">=0" \] \],/  SuggestedOtherPackages := [ ],/g' -i ~/.gap/pkg/CAP_project/CAP/PackageInfo.g
           make ci-test
